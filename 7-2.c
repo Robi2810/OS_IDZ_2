@@ -8,13 +8,6 @@
 #include <stdlib.h>
 #include <signal.h>
 
-// status: 0 - cutter free; 1 - cuttting
-// buf: conatins ids of new client
-// when cutter is cutting he will close sem
-// when free, open it
-// first client to access open sem will change status of 
-// cutter to cutting and close sem
-
 #define CHILDREN_MAX 16
 
 static volatile int keepRunning = 1;
